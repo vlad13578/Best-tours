@@ -557,21 +557,25 @@ textarea {
     max-width: 1140px;
     margin: 0 auto;
 }
+.footer{
+    height: 149px;
+}
 .footer_item{
     display: flex;
     flex-wrap: wrap;
+    height: 149px;
 }
 .footer_nav{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content:  space-between;
+    align-items: center;
 }
-.footer_menu_item{
-    margin-bottom: 15px;
-}
+
 .footer_menu_link{
-    margin-right: 30px; /* відступи між кнопками */
+    text-decoration: none; /*забрати пікселі на лінку*/
+    margin-right: 57px; /* відступи між кнопками */
 }
 .footer_menu_link:last-child { /* відступи від останньої кнопки */
     margin-right: 0px;
@@ -579,20 +583,10 @@ textarea {
 .footer_menu_link:hover, .footer_menu_link:focus, .footer_menu_link:active{ /*Підсвітити кнопки */
     opacity: .80;
 } 
-.footer_menu_item_keepintouch{
-    font-family: Roboto;
-    font-size: 30px;
-    line-height: 35px;
-    text-align: center;
-    color: #FFFFFF;
-    padding-top: 20px;
-    text-transform: uppercase;
-}
 .footer_menu_item_email{
     font-family: Roboto;
     max-width: 223px;
     margin: 0;
-    padding-top: 55px;
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;
@@ -600,7 +594,6 @@ textarea {
 .footer_menu_item_number{
     font-family: Roboto;
     max-width: 172px;
-    padding-top: 35px;
     font-size: 20px;
     line-height: 23px;
     color: #FFFFFF;  
@@ -664,43 +657,9 @@ textarea {
         transform: translateY(-50%) rotate(-45deg);
     }
 }
-@media screen and (max-width: 849px){
-    .footer_menu_item{
-        margin-bottom: 15px;/*Відступ іконок від кинця футера*/
-    }
+@media screen and (max-width: 920px){
     .footer_menu_link{
         margin-right: 8px; /* відступи між кнопками */
-    }
-    .footer_menu_link:last-child { /* відступи від останньої кнопки */
-        margin-right: 0px;
-    }
-    .footer_menu_item_keepintouch{
-        font-family: Roboto;
-        font-size: 14px;
-        line-height: 16px;        
-        text-align: center;
-        color: #FFFFFF;
-        padding-top: 12px; /* Відступ від початку футера*/
-        text-transform: uppercase;
-    }
-    .footer_menu_item_email{
-        font-family: Roboto;
-        max-width: 106px;
-        margin: 0;
-        padding-top: 37px; /* Відступ від початку футера*/
-        font-size: 10px;
-        line-height: 12px;
-        color: #FFFFFF;
-    }
-    .footer_menu_item_number{
-        font-family: Roboto;
-        max-width: 86px;
-        padding-top: 21px; /* Відступ від початку футера*/
-        font-size: 10px;
-        line-height: 12px;
-        color: #FFFFFF;  
-        align-items: center;
-        text-align: center;
     }
 }
 @media screen and (max-width: 678px){
@@ -754,6 +713,7 @@ textarea {
         border-radius: 25px;
         border: 0;
     }
+
 }
 @media screen and (max-width: 650px){
     .header_logo{
@@ -768,6 +728,29 @@ textarea {
     .burger_line{
         width: 100%;
         height: 2px;
+    }
+    .footer{
+        height: 76px;
+    }
+    .footer_item{
+        height: 76px;
+    }
+    .footer_menu_item_email{
+        font-family: Roboto;
+        max-width: 106px;
+        margin: 0;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+    }
+    .footer_menu_item_number{
+        font-family: Roboto;
+        max-width: 86px;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;  
+        align-items: center;
+        text-align: center;
     }
 }
 @media screen and (max-width: 361px){
@@ -830,37 +813,20 @@ textarea {
         border-radius: 25px;
         border: 0;
     }
-    .footer_menu_item{
-        margin-bottom: 15px;/*Відступ іконок від кинця футера*/
-    }
     .footer_menu_link{
-        margin-right: 8px; /* відступи між кнопками */
-    }
-    .footer_menu_link:last-child { /* відступи від останньої кнопки */
-        margin-right: 0px;
-    }
-    .footer_menu_item_keepintouch{
-        font-family: Roboto;
-        font-size: 10px;
-        line-height: 12px;
-        text-align: center;
-        color: #FFFFFF;
-        padding-top: 12px; /* Відступ від початку футера*/
-        text-transform: uppercase;
+        margin-right: 2px; /* відступи між кнопками */
     }
     .footer_menu_item_email{
         font-family: Roboto;
         max-width: 223px;
         margin: 0;
-        padding-top: 37px; /* Відступ від початку футера*/
         font-size: 8px;
         line-height: 9px;
         color: #FFFFFF;
     }
     .footer_menu_item_number{
         font-family: Roboto;
-        max-width: 74px;
-        padding-top: 21px; /* Відступ від початку футера*/
+        max-width: 70px;
         font-size: 8px;
         line-height: 9px;
         color: #FFFFFF;  
