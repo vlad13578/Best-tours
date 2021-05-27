@@ -417,10 +417,12 @@ textarea {
 /* Header styles start*/
  .header{
     background-color: #131312;
-    /*position: fixed;*/
     top: 0;
     left: 0;
     width: 100%;
+ }
+ .header_active{
+   background: #131312;
  }
 
  .header_wrapper{
@@ -435,36 +437,117 @@ textarea {
     flex-wrap: wrap;
  }
 
+.header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
  .header_item{
-     margin-right: 84px; /* відступи між кнопками */
+     display: flex;
+     justify-content: flex-start; 
+     /* justify-content: center;  */
+    /*  margin-right: 84px;  відступи між кнопками */
  }
 
- .header_item:last-child { /* відступи від останньої кнопки */
-    margin-right: 0px;
-}
 .header_link{
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px 15px 40px;
+    width: 209.5px; 
     font-family: Roboto;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24 px;
     color:#FFFFFF;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
+
 .header_logomini_pic{
     margin-bottom: 50px;
+
 }
+
+.header_logo_pic{
+    margin-bottom: 1px;
+}
+
 .header_nav{
-    padding-bottom: 59px; /* опустити кнопки навігації */
+    padding-bottom: 41.5px;
 }
-.header_link:hover, .header_link:focus, .header_link:active{ /*Підсвітити кнопки */
-    opacity: .80;
+
+.header_list>li:hover .submenu_list{
+    display: block;
+    transition: all 0.3s ease;
+} 
+.submenu_list>li:hover .sub_submenu_list{
+    display: block;
+    transition: all 0.3s ease;
+} 
+
+.header_link:hover { 
+    background: #FFFFFF;
+    border-left: 1px solid #131312;
+    border-right: 1px solid #131312;
+    color: #131312;
+    transition: all 0.3s ease;
 }
+
+
+.submenu_item:hover {
+    background: #bdbdb5;
+    transition: all 0.3s ease;
+}
+.sub_submenu_item:hover {
+    background: #bdbdb5;
+    transition: all 0.3s ease;
+}
+
+.submenu_list{
+    display: none;
+    min-width: 209.5px;
+    margin-top: 48px;
+    position: absolute;
+}
+
+.submenu_item:first-child{
+    border-top: 1px solid #131312;
+}
+
+.submenu_item{
+    min-width: 209.5px; 
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-left: 1px solid #131312;
+    border-right: 1px solid #131312;
+    border-bottom: 1px solid #131312;
+    transition: all 0.3s ease;
+}
+.sub_submenu_list{
+    display: none;
+    position: absolute;
+    right: -209.5px;
+    top: 41px;
+}
+.submenu_link{
+    padding: 10px 25px 10px 25px;
+    font-family: Roboto;
+    font-size: 15x;
+    line-height: 20px;
+    text-decoration: none;
+    color: #131312;
+} 
+
+
+
+/*header_burger*/
 .header_burger{
     display: none;
     width: 60px;
     height: 52px;
     margin-right: 50px;
     position: relative;
-    margin-bottom: 48px;
+    margin-bottom: 39.5px;
 }
 .burger_line{
     background-color: #9F9999;
@@ -486,12 +569,77 @@ textarea {
 }
 /* Header styles end*/
 
+/* Submit form start */
+
+.form {
+    display: none;
+    position: absolute;
+	background-color: rgb(116, 116, 116);
+	border: 2px solid #131312;
+	height: 350px;
+	width: 420px;
+    margin-top: 200px;
+    margin-left: 40%;
+	text-align: center;
+}
+
+.mainText {
+	font-size: 27px;
+	margin: 40px 0 5px 0;
+	color: #030303;
+}
+.secondText {
+	font-size: 18px;
+	margin: 0;
+	color: #030303;
+	margin-bottom: 25px;
+}
+
+.formInput {
+	background: #f1f1f1;
+	height: 50px;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	width: 300px;
+	margin: 15px auto 0 auto;
+}
+
+.formInput input {
+	flex: .7;
+	background: #f1f1f1;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+
+.send {
+	border: none;
+	color: #131312;
+	background: #E8E141;
+	width: 180px;
+	height: 40px;
+	border-radius: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 30px;
+	transition: .4s;
+	outline: none;
+}
+
+.send:hover {
+    color: #E8E141;
+	background: #131312;
+}
+
+/* Submit form end*/
+
 /* Intro styles start*/
 .intro{
     min-height: 100vh;
     background: url(../img/Background.jpg) no-repeat center;
     background-size: cover;
-    padding-top: 167px;
+    padding-top: 50px;
 }
 .intro_title{
     max-width: 500px; /*границя тексту*/
@@ -544,6 +692,102 @@ textarea {
     background: #a09c2d;
 }
 /* Intro styles end*/
+
+/* Prices start */
+.prices{
+    max-width: 1140px;
+    margin: 100px auto;
+}
+.prices__title{
+    margin-bottom: 54px;
+}
+
+.prices__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.prices__card-pic{
+    position: relative;
+}
+
+.prices__card{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.prices__card-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+}
+
+.prices__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.prices__card-more{
+    width: 350px;
+    padding: 12px 19px;
+    background: #E8E141;
+    text-decoration: none;
+    color: #131312;
+    font-size: 16px;
+    margin: auto 0 0 0 ;
+}
+
+.prices__card-pic:hover, .prices__card-pic:focus, .prices__pic-more:active{
+    opacity: 0.90;
+}
+
+.prices__card-more:hover, .prices__card-more:focus, .prices__card-more:active{
+    background: #131312;
+    color: #E8E141;
+}
+/* Prices end  */
+
+.adaptimage{
+    width: 100%;
+}
+
+/* Videos styles start */
+
+.videos{
+    width: 100%;
+    background: #131312;
+}
+
+.videos__wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video__item{
+    padding-top: 56.25%;
+}
+
+.video__element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Videos styles end */
 
 /* footer styles start*/
 .footer{
@@ -603,9 +847,35 @@ textarea {
 /* footer styles end*/
 
 /* media styles start*/
+@media screen and (max-width: 1120px){
+
+}
 @media screen and (max-width: 1045px){
+    .header_list>li:hover .submenu_list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    .submenu_list{
+        min-width: 300px;
+        margin-top: 0px; 
+    }
+    .header_item{
+        flex-direction: column;
+    } 
+   .header_link{
+       display: flex;
+       justify-content: start;
+       padding: 15px 40px 15px 40px;
+       width: 300px; 
+   }
     .header_burger{
         display: block;
+    }
+    .header_list{
+        display: flex;
+        flex-direction: column;
     }
     .header_nav{
         width: 100%;
@@ -615,26 +885,11 @@ textarea {
         left: 0;
         background-color: #000;
         z-index: 10;
-        padding: 75px;
+        padding: 20px;
         transform: translate(100%);
-        transition: .2s all linear;
+        transition: 0.2s all linear;
     }
-    .header_nav_active{
-        transform: translateX(0);
-    }
-    .header_item{
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-    .header_item:last-child{
-        margin-bottom: 0;
-    }
-    .header_link{
-        font-size: 42px;
-        line-height: 48px;
-    }
-    .header_nav-close{
+    .header_nav_close{
         width: 40px;
         height: 40px;
         position: absolute;
@@ -642,7 +897,7 @@ textarea {
         right: 20px;
         z-index: 11;
     }
-    .header_nav-close-line{
+    .header_nav_close_line{
         display: block;
         width: 100%;
         height: 2px;
@@ -650,16 +905,31 @@ textarea {
         position: absolute;
         top: 50%;
     }
-    .header_nav-close-line:first-child{
+    .header_nav_close_line:first-child{
         transform: translateY(-50%) rotate(45deg);
     }
-    .header_nav-close-line:last-child{
+    .header_nav_close_line:last-child{
         transform: translateY(-50%) rotate(-45deg);
     }
+    .header_nav_active{
+        transform: translateX(0);
+    } 
+    .header_item{
+        min-width: 300px;
+        min-height: 30px;
+    }
+
+    .header_link{
+        width: 300px;
+        height: 100px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
 }
 @media screen and (max-width: 920px){
     .footer_menu_link{
-        margin-right: 8px; /* відступи між кнопками */
+        margin-right: 8px; 
     }
 }
 @media screen and (max-width: 678px){
