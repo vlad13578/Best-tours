@@ -703,7 +703,10 @@ textarea {
     border: 0;
 }
 .search_form_submit:hover, .search_form_submit:focus, .search_form_submit:active{ /*Підсвітити кнопку коли активна*/
-    background: #a09c2d;
+   transform: translate3D(20px, 20px, 50px);
+   background: #131312;
+   color: #E8E141;
+   transition: 0.5s;
 }
 /* Intro styles end*/
 
